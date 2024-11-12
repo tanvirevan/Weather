@@ -1,0 +1,55 @@
+import { useContext } from "react";
+import { WeatherContext } from "../../context";
+import { getFormattedDate } from "../../utils/dateFormet";
+// import CloudIcon from "/cloud.svg";
+// import HazeIcon from "/haze.svg";
+// import SnowIcon from "/snow.svg";
+// import SunnyIcon from "/sunny.svg";
+// import RainIcon from "/rainy.svg";
+// import ThunderIcon from "/thunder.svg";
+
+export default function WeatherHeadline() {
+  const { weatherData } = useContext(WeatherContext);
+  const { climate, location, temperature, time } = weatherData;
+
+  function getWeatherIcon(climate) {
+    switch (climate) {
+      case "Rain":
+        return "/rainy.svg";
+      case "Clouds":
+        return "/cloud.svg";
+      case "Clear":
+        return "/sunny.svg";
+      case "Snow":
+        return "/snow.svg";
+      case "Thunder":
+        return "/thunder.svg";
+      case "Fog":
+      case "Haze":
+      case "Mist":
+        return "/haze.svg";
+      default:
+        return "/sunny.svg";
+    }
+  }
+
+  return (
+    <div>
+      <div className="max-md:flex items-center justify-between md:-mt-10">
+        <img src={getWeatherIcon(climate)} alt="weather icon" />
+        <div className="max-md:flex items-center max-md:space-x-4">
+          <h1 className="text-[60px] lg:text-[80px] xl:text-[100px] leading-none md:mb-4">
+            {temperature}°c
+          </h1>
+          <div className="flex items-center space-x-4 md:mb-4">
+            <img src="/pin.svg" alt="location pin" />
+            <h2 className="text-2xl lg:text-[50px]">{location}</h2>
+          </div>
+        </div>
+      </div>
+      <p className="text-sm lg:text-lg">
+        {getFormattedDate(time, "time", false)} - {getFormattedDate(time, "date", false)}
+      </p>
+    </div>
+  );
+}
