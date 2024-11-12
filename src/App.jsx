@@ -1,7 +1,7 @@
 
 import './App.css'
-import Pages from './components/pages';
 import { WeatherProvider } from './provider';
+import Pages from './components/Pages';
 
 function App() 
   {
