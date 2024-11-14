@@ -84,7 +84,6 @@ const useWeather = () => {
 
   }, []);
   
-  console.log(weatherData);
   return { weatherData, error, loading };
 };
 

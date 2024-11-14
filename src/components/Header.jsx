@@ -1,5 +1,4 @@
 import Favourite from "../action/Favourite";
-import FavouriteListModal from "../action/FavouriteListModal";
 import Search from "../action/Search";
 
 export default function Header()
@@ -14,9 +13,6 @@ export default function Header()
         <div className="flex items-center gap-4 relative">
           <Search/>
           <Favourite/>
-
-          {/* Modal  */}
-          <FavouriteListModal/>
 
         </div>
       </nav>

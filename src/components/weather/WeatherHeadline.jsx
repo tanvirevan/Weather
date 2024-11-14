@@ -1,12 +1,6 @@
 import { useContext } from "react";
 import { WeatherContext } from "../../context";
 import { getFormattedDate } from "../../utils/dateFormet";
-// import CloudIcon from "/cloud.svg";
-// import HazeIcon from "/haze.svg";
-// import SnowIcon from "/snow.svg";
-// import SunnyIcon from "/sunny.svg";
-// import RainIcon from "/rainy.svg";
-// import ThunderIcon from "/thunder.svg";
 
 export default function WeatherHeadline() {
   const { weatherData } = useContext(WeatherContext);

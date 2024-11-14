@@ -1,8 +1,8 @@
-import AddToFavourite from "../../action/AddToFavourite";
 import WeatherHeadline from "./WeatherHeadline";
 import WeatherConditon from "./WeatherConditon";
 import { useContext } from "react";
 import { WeatherContext } from "../../context";
+import ToggleFavourite from "../../action/toggleFavourite";
 
 export default function WeatherBord() 
 {
@@ -21,7 +21,7 @@ export default function WeatherBord()
                :
               (
                 <>
-                  <AddToFavourite />
+                  <ToggleFavourite/>
                   <WeatherHeadline />
                   <WeatherConditon />
                 </>
