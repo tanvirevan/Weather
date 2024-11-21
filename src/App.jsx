@@ -1,5 +1,5 @@
 import './App.css'
-import { FavouriteProvider, WeatherProvider } from './provider';
+import { FavouriteProvider,  WeatherProvider } from './provider';
 import Pages from './components/Pages';
 
 
@@ -8,7 +8,7 @@ function App()
     return (
       <WeatherProvider>
         <FavouriteProvider>
-          <Pages/>
+            <Pages/>
         </FavouriteProvider>
       </WeatherProvider>
     )

@@ -20,6 +20,6 @@ const WeatherProvider = ({children}) =>
 export default WeatherProvider;
 
 WeatherProvider.propTypes =
-    {
-      children: PropTypes.node
-    }
+  {
+    children: PropTypes.node
+  }

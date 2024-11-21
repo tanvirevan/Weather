@@ -13,6 +13,7 @@ export default function ToggleFavourite()
     {
       const found = favourites.find((fav) => fav.location === location);
       toggleFavourite(found);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
    function handleToggleFavourite()
