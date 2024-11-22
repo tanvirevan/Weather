@@ -1,6 +1,8 @@
-import PropTypes from 'prop-types';
 import { useState } from "react";
+import PropTypes from 'prop-types';
+// import { LocationContext } from "./context";
 import { LocationContext } from "../context";
+
 
 const LocationProvider = ({ children }) => {
     const [selectedLocation, setSelectedLocation] = useState({
@@ -17,9 +19,9 @@ const LocationProvider = ({ children }) => {
     );
 };
 
-export default LocationProvider;
 
 LocationProvider.propTypes =
-  {
-    children: PropTypes.node
-  }
+{
+    children: PropTypes.node.isRequired
+}
+export default LocationProvider;

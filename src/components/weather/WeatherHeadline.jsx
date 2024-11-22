@@ -6,24 +6,25 @@ export default function WeatherHeadline() {
   const { weatherData } = useContext(WeatherContext);
   const { climate, location, temperature, time } = weatherData;
 
-  function getWeatherIcon(climate) {
+  function getWeatherIcon(climate) 
+  {
     switch (climate) {
       case "Rain":
-        return "/rainy.svg";
+        return "icons/rainy.svg";
       case "Clouds":
-        return "/cloud.svg";
+        return "/icons/cloud.svg";
       case "Clear":
-        return "/sunny.svg";
+        return "/icons/sunny.svg";
       case "Snow":
-        return "/snow.svg";
+        return "/icons/snow.svg";
       case "Thunder":
-        return "/thunder.svg";
+        return "/icons/thunder.svg";
       case "Fog":
       case "Haze":
       case "Mist":
-        return "/haze.svg";
+        return "/icons/haze.svg";
       default:
-        return "/sunny.svg";
+        return "/icons/sunny.svg";
     }
   }
 
